@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#180b20">
+  <meta name="description" content="Ganga Mai ki Betiyan — visit the page and cast your vote.">
+  <title>Ganga Mai ki Betiyan | Vote Now</title>
+  <style>
+    :root {
+      --gold: #ffd978;
+      --gold2: #ffb52e;
+      --ink: #180b20;
+      --plum: #35112f;
+      --cream: #fff7e8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(255, 184, 66, .24), transparent 42%),
+        linear-gradient(145deg, #120817, #28102d 55%, #100814);
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .topline {
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, #a44a13, #ffe7a0, #d47b1e, #fff0b5, #a44a13);
+    }
+    header { width: min(1120px, 100%); padding: 22px 20px 12px; text-align: center; }
+    .eyebrow {
+      color: var(--gold); text-transform: uppercase; letter-spacing: .22em;
+      font-size: .72rem; font-weight: 800;
+    }
+    h1 {
+      margin: 8px 0 0; font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.65rem, 5vw, 3rem); line-height: 1.1;
+      color: #fff2d0; text-shadow: 0 2px 22px rgba(255, 181, 46, .18);
+    }
+    main { width: min(1000px, 100%); padding: 10px 18px 42px; text-align: center; }
+    .poster-wrap {
+      position: relative; overflow: hidden; border-radius: 22px;
+      border: 1px solid rgba(255, 220, 145, .55);
+      background: #2b1628;
+      box-shadow: 0 22px 70px rgba(0,0,0,.48), 0 0 0 5px rgba(255,215,120,.045);
+      animation: floatIn 1s cubic-bezier(.2,.8,.2,1) both, gentleFloat 6s ease-in-out 1s infinite;
+      transform-origin: center;
+    }
+    .poster-wrap::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(115deg, transparent 25%, rgba(255,255,255,.14) 43%, transparent 58%);
+      transform: translateX(-130%); animation: shine 7s ease-in-out 2s infinite;
+    }
+    .poster { display: block; width: 100%; height: auto; }
+    .caption { margin: 24px auto 18px; color: #f6e6d4; font-size: clamp(.95rem, 2.3vw, 1.12rem); }
+    .button-area { display: flex; justify-content: center; margin: 22px 0 12px; }
+    .vote-btn {
+      position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      min-width: min(300px, 90vw); padding: 17px 32px; border-radius: 999px;
+      border: 1px solid #fff0b4; color: #35120b; text-decoration: none;
+      text-transform: uppercase; letter-spacing: .11em; font-size: 1.05rem; font-weight: 900;
+      background: linear-gradient(110deg, #fff0a8 0%, #ffca55 28%, #ffab25 52%, #ffe7a0 78%, #e99619 100%);
+      background-size: 220% 100%; box-shadow: 0 9px 0 #8c4c14, 0 15px 34px rgba(255,174,36,.28), inset 0 2px 0 rgba(255,255,255,.8);
+      transition: transform .22s ease, box-shadow .22s ease, background-position .6s ease;
+      animation: buttonPulse 2.4s ease-in-out infinite;
+    }
+    .vote-btn:hover, .vote-btn:focus-visible {
+      transform: translateY(-4px) scale(1.025); background-position: 100% 0;
+      box-shadow: 0 12px 0 #8c4c14, 0 20px 42px rgba(255,174,36,.42), inset 0 2px 0 rgba(255,255,255,.8);
+      outline: 3px solid rgba(255,231,160,.4); outline-offset: 5px;
+    }
+    .vote-btn:active { transform: translateY(3px); box-shadow: 0 4px 0 #8c4c14, 0 8px 20px rgba(255,174,36,.25); }
+    .arrow { font-size: 1.3rem; line-height: 1; }
+    .disclosure { max-width: 600px; margin: 16px auto 0; color: #d6c4d4; font-size: .78rem; line-height: 1.55; }
+    footer { width: 100%; padding: 18px 20px 26px; text-align: center; color: #a996aa; font-size: .75rem; border-top: 1px solid rgba(255,255,255,.08); }
+    @keyframes floatIn { from { opacity: 0; transform: translateY(22px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes gentleFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes shine { 0%,58%,100% { transform: translateX(-130%); } 72% { transform: translateX(130%); } }
+    @keyframes buttonPulse { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.09); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+    @media (max-width: 520px) {
+      header { padding-top: 18px; }
+      main { padding-inline: 12px; }
+      .poster-wrap { border-radius: 14px; }
+      .vote-btn { padding: 16px 24px; font-size: .95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="eyebrow">Your choice matters</div>
+    <h1>Ganga Mai ki Betiyan</h1>
+  </header>
+
+  <main>
+    <div class="poster-wrap">
+      <img class="poster" src="assets/banner.png" alt="Ganga Mai ki Betiyan promotional poster">
+    </div>
+    <p class="caption">Show your support — tap the button below.</p>
+
+    <!-- Replace the URL below with your approved destination.
+         If this is an advertising direct link, keep the sponsored-link disclosure visible. -->
+    <div class="button-area">
+      <a class="vote-btn"
+         href="https://auctionr.org/4/d3abcfda033f6fcf138e3b2758a83026"
+         target="_blank" rel="sponsored noopener noreferrer"
+         aria-label="Open sponsored link">
+        <span>Vote Now</span><span class="arrow" aria-hidden="true">➜</span>
+      </a>
+    </div>
+    <p class="disclosure">Notice: This button opens an external sponsored link. It does not record a vote on this website. Use a real voting destination if you want votes to be counted.</p>
+  </main>
+
+  <footer>© <span id="year"></span> Ganga Mai ki Betiyan · All rights reserved.</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
