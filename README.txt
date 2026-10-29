@@ -1,13 +1,16 @@
 Ganga Mai ki Betiyan — premium landing page
 
-Files:
+Upload these files to the ROOT of your GitHub repository:
 - index.html
 - banner.png
 
-GitHub upload:
-Upload BOTH index.html and banner.png to the repository root (same level).
-The page includes the supplied Adsterra 320x50 banner ad code near the bottom.
-The Vote Now button opens the supplied Adsterra direct link. Clicking it is not an actual TV-show vote.
+The page includes:
+- Animated poster and premium Vote Now button
+- Bottom 320x50 banner ad script
+- Adsterra Social Bar script supplied by the site owner
+- Local-browser visitor and button-click counters
 
-Note:
-Ad display depends on the ad provider, browser settings, and the site being published. Check the provider's current terms and ensure the ad placement follows them.
+Important:
+The counters are local to each browser/device and are not shared totals across all visitors.
+Ad display is controlled by the ad provider and may be affected by browser settings or provider approval.
+The Vote Now button opens a sponsored link; it does not submit an actual TV-show vote.
