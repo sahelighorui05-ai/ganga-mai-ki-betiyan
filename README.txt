@@ -6,12 +6,8 @@ Files:
 
 GitHub upload:
 Upload BOTH index.html and banner.png to the repository root (same level).
-Then commit changes and wait for GitHub Pages to redeploy.
+The page includes the supplied Adsterra 320x50 banner ad code near the bottom.
+The Vote Now button opens the supplied Adsterra direct link. Clicking it is not an actual TV-show vote.
 
-Included:
-- Poster float/shine animation
-- Premium animated gold Vote Now button
-- Visitor and button-click counters
-
-Important counter limitation:
-The included counters are local to each browser/device, not shared totals across all visitors. To show real global visitor and click counts, connect a shared backend such as Firebase Realtime Database. The Vote Now button opens the supplied sponsored link; it does not cast an actual TV-show vote.
+Note:
+Ad display depends on the ad provider, browser settings, and the site being published. Check the provider's current terms and ensure the ad placement follows them.
