@@ -1,14 +1,17 @@
-Ganga Mai ki Betiyan landing page
-===================================
+Ganga Mai ki Betiyan — premium landing page
 
 Files:
 - index.html
-- assets/banner.png
+- banner.png
 
-Setup:
-1. Open index.html in a browser to preview.
-2. Your supplied Adsterra Direct Link is already connected to the Vote Now button.
-3. Upload index.html and the assets folder together to your web hosting.
+GitHub upload:
+Upload BOTH index.html and banner.png to the repository root (same level).
+Then commit changes and wait for GitHub Pages to redeploy.
 
-Important:
-The page transparently tells visitors that the button opens a sponsored link and does not record a vote. If you have a real voting page, link the Vote Now button to that destination instead, and place advertising separately.
+Included:
+- Poster float/shine animation
+- Premium animated gold Vote Now button
+- Visitor and button-click counters
+
+Important counter limitation:
+The included counters are local to each browser/device, not shared totals across all visitors. To show real global visitor and click counts, connect a shared backend such as Firebase Realtime Database. The Vote Now button opens the supplied sponsored link; it does not cast an actual TV-show vote.
